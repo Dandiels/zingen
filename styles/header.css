@@ -1,0 +1,17 @@
+header
+{
+    & a:first-child
+    {
+        margin-right: auto;
+    }
+
+    & a:not(:last-child)
+    {
+        color: var(--text-color-secondary);
+
+        &:hover
+        {
+            color: transparent;
+        }
+    }
+}
