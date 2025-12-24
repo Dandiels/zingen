@@ -28,6 +28,17 @@
 .even-columns
 {
     display: grid;
+    gap: 1rem;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.grid
+{
+    display: grid;
 }
 
 @media (width >= 80em)
