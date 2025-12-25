@@ -13,5 +13,6 @@
     #about .even-columns
     {
         gap: 2rem;
+        grid-template-columns: calc(640 / 1216 * 100%) calc(544 / 1216 * 100%);
     }
 }
