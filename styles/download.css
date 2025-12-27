@@ -1,0 +1,55 @@
+#download
+{
+    .card
+    {
+        padding: 3rem 1.5rem 15rem;
+        position: relative;
+
+        & > img
+        {
+            width: 14.875rem;
+            position: absolute;
+            bottom: 0.01875rem;
+            right: -3.134375rem;
+            filter: drop-shadow(0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.64));
+        }
+    }
+
+    .buttons
+    {
+        flex-wrap: wrap;
+        gap: 0.9375rem;
+        margin-top: 2rem;
+
+        & a img
+        {
+            display: block;
+        }
+    }
+
+    @media (width >= 80em)
+    {
+        .card
+        {
+            padding: 8.75rem 5rem;
+
+            & > div:nth-child(1)
+            {
+                max-width: 40rem;
+            }
+
+            & > img
+            {
+                width: 29.125rem;
+                bottom: 0.01625rem;
+                right: -3rem;
+                filter: drop-shadow(1rem 1rem 4rem rgba(0, 0, 0, 0.64));
+            }
+        }
+
+        .buttons
+        {
+            margin-top: 2.5rem;
+        }
+    }
+}
