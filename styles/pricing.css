@@ -34,7 +34,7 @@
         display: block;
         padding-block: 1.5rem;
         font: var(--fw-bold) var(--fs-price) / 1.2 var(--ff-sans);
-        letter-spacing: -0.04em;
+        letter-spacing: -0.04rem;
     }
 
     & zin-pricing small
@@ -111,7 +111,7 @@
 
                 font: 600 0.75rem/100% var(--ff-sans);
                 text-transform: uppercase;
-                letter-spacing: 0.08em;
+                letter-spacing: 0.08rem;
                 color: var(--bg-color);
             }
         }

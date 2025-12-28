@@ -1,0 +1,86 @@
+footer
+{
+    color: var(--text-color-secondary);
+    font-weight: var(--fw-md);
+
+    & > div
+    {
+        padding: var(--py-xl) 3rem var(--py-lg);
+    }
+
+    & > div,
+    & .top
+    {
+        gap: 3rem;
+    }
+
+    & nav.even-columns
+    {
+        gap: 4rem;
+    }
+
+    & .top ul
+    {
+        align-content: start;
+        gap: 1.25rem;
+
+        & .title
+        {
+            font-size: 0.75rem;
+            line-height: 100%;
+            letter-spacing: 0.08rem;
+            text-transform: uppercase;
+            color: var(--brand-color-primary);
+        }
+        
+        & li
+        {
+            line-height: 1.5rem;
+        }
+    }
+
+    & .bottom
+    {
+        flex-wrap: wrap;
+
+        & span
+        {
+            font: var(--fw-base) var(--fs-sm)/1.5rem var(--ff-sans);
+        }
+    }
+
+    @media (width >= 80em)
+    {
+        & > div
+        {
+            padding: var(--py-xl) var(--px-lg) 2rem;
+            gap: 5rem;
+        }
+
+        & .top
+        {
+            grid-template-columns: auto 1fr;
+            gap: 0;
+
+            & nav
+            {
+                margin-left: auto;
+
+                & ul
+                {
+                    width: 14rem;
+                }
+            }
+        }
+
+        & .bottom
+        {
+            gap: 0;
+
+            & > div
+            {
+                margin-right: auto;
+            }
+        }
+    }
+}
