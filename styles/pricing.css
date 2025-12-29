@@ -1,52 +1,90 @@
+/*
+  Seção de planos e preços.
+*/
 #pricing
 {
+    /*
+      Variável local para o tamanho do preço.
+      Facilita ajustes responsivos.
+    */
     --fs-price: 2rem;
 
+    /*
+      Cabeçalho centralizado.
+    */
     & header
     {
         text-align: center;
     }
 
+    /*
+      Container dos cards de planos.
+    */
     & .cards
     {
         margin-top: 2rem;
         gap: 2rem;
     }
 
+    /*
+      Ajuste de espaçamento vertical dos cards.
+    */
     & .card
     {
         padding-block: 1.5rem;
     }
 
+    /*
+      Título do plano.
+    */
     & h3
     {
         margin-top: 0;
         font-size: 1.25rem;
     }
 
+    /*
+      Descrição do plano.
+    */
     & .card p
     {
         margin-top: 0.25rem;
     }
 
+    /*
+      Componente de preço (custom element).
+    */
     & zin-pricing
     {
         display: block;
         padding-block: 1.5rem;
+
+        /*
+          Tipografia de destaque para o valor.
+        */
         font: var(--fw-bold) var(--fs-price) / 1.2 var(--ff-sans);
         letter-spacing: -0.04rem;
     }
 
+    /*
+      Texto auxiliar do preço (/mês, por pessoa, etc.).
+    */
     & zin-pricing small
     {
-        font: var(--fw-base) 1rem/125% var(--ff-sans);
+        font: var(--fw-base) 1rem / 125% var(--ff-sans);
         color: var(--text-color-secondary);
     }
 
+    /*
+      Botões ocupam toda a largura do card.
+    */
     & .btn
     {
         width: 100%;
 
+        /*
+          Ajuste do fundo interno para botões com aria-label.
+        */
         &[aria-label]
         {
             &::before
@@ -56,10 +94,17 @@
         }
     }
 
+    /*
+      Separador visual entre botão e lista de benefícios.
+    */
     & .separator
     {
         height: 1px;
         margin-block: 2rem;
+
+        /*
+          Gradiente sutil para efeito de divisão elegante.
+        */
         background: linear-gradient(
             90deg,
             var(--surface-color) 0%, 
@@ -68,14 +113,24 @@
         );
     }
 
+    /*
+      Itens da lista de benefícios.
+    */
     & li
     {
         color: var(--text-color-secondary);
         line-height: 1.5rem;
+
+        /*
+          Ícone de check como background.
+        */
         background: url(../assets/icons/Check.svg) no-repeat;
         padding-left: 2rem;
     }
 
+    /*
+      Observação abaixo da lista (ex: plano família).
+    */
     & ul + small
     {
         display: block;
@@ -85,14 +140,23 @@
         color: var(--text-color-secondary);
     }
 
+    /*
+      Destaque do plano Premium.
+    */
     & .premium
     {
         position: relative;
 
+        /*
+          Card interno do plano premium.
+        */
         & .card
         {
             padding: 4.375rem 1.375rem 1.375rem;
-            
+
+            /*
+              Badge "1 mês grátis".
+            */
             & > span
             {
                 position: absolute;
@@ -100,6 +164,7 @@
                 left: 0;
 
                 padding: 0.75rem 2rem;
+
                 background: linear-gradient(
                     90deg,
                     var(--brand-color-secondary) 0%,
@@ -109,15 +174,21 @@
                 border-top-left-radius: 1.5rem;
                 border-bottom-right-radius: 1.5rem;
 
-                font: 600 0.75rem/100% var(--ff-sans);
+                font: 600 0.75rem / 100% var(--ff-sans);
                 text-transform: uppercase;
                 letter-spacing: 0.08rem;
                 color: var(--bg-color);
             }
         }
 
+        /*
+          Espaço para a borda gradiente.
+        */
         padding: 2px;
 
+        /*
+          Borda externa em gradiente.
+        */
         &::before
         {
             content: "";
@@ -126,6 +197,7 @@
                 var(--brand-color-secondary) 0%,
                 var(--brand-color-primary) 100%
             );
+
             position: absolute;
             inset: 0;
             border-radius: 1.5rem;
@@ -133,13 +205,22 @@
         }
     }
 
+    /*
+      Ajuste específico do separador no terceiro card.
+    */
     & .card:nth-child(3) .separator
     {
         margin-block: 1.5rem;
     }
 
+    /*
+      Estilos para telas grandes (desktop).
+    */
     @media (width >= 80em)
     {
+        /*
+          Preço maior no desktop.
+        */
         --fs-price: 2.5rem;
 
         & .card
@@ -147,17 +228,26 @@
             padding-block: 2rem;
         }
 
+        /*
+          Limita largura do cabeçalho.
+        */
         & header
         {
             max-width: 50rem;
             margin-inline: auto;
         }
 
+        /*
+          Ajuste de padding do card premium.
+        */
         & .premium .card
         {
             padding: 4.375rem 1.875rem 5.875rem;
         }
 
+        /*
+          Padronização do botão médio no desktop.
+        */
         .btn-md
         {
             padding: 0.75rem 1.5rem;

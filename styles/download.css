@@ -1,10 +1,19 @@
+/*
+  Seção de download do aplicativo.
+*/
 #download
 {
+    /*
+      Card principal da seção de download.
+    */
     .card
     {
         padding: 3rem 1.5rem 15rem;
         position: relative;
 
+        /*
+          Imagem ilustrativa posicionada no canto inferior direito.
+        */
         & > img
         {
             width: 14.875rem;
@@ -15,29 +24,44 @@
         }
     }
 
+    /*
+      Container dos botões de download (App Store / Play Store).
+    */
     .buttons
     {
         flex-wrap: wrap;
         gap: 0.9375rem;
         margin-top: 2rem;
 
+        /*
+          Garante que as imagens dos botões sejam tratadas como bloco.
+        */
         & a img
         {
             display: block;
         }
     }
 
+    /*
+      Ajustes para telas grande.
+    */
     @media (width >= 80em)
     {
         .card
         {
             padding: 8.75rem 5rem;
 
+            /*
+              Limita a largura do conteúdo textual.
+            */
             & > div:nth-child(1)
             {
                 max-width: 40rem;
             }
 
+            /*
+              Imagem maior e reposicionada no layout desktop.
+            */
             & > img
             {
                 width: 29.125rem;
@@ -47,6 +71,9 @@
             }
         }
 
+        /*
+          Espaçamento vertical maior entre os botões no desktop.
+        */
         .buttons
         {
             margin-top: 2.5rem;

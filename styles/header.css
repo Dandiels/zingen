@@ -1,14 +1,32 @@
+/*
+  Estilização do cabeçalho (header).
+  Controla o comportamento dos links de navegação.
+*/
 header
 {
+    /*
+      Primeiro link do header (logo).
+      Empurra os demais links para a direita.
+    */
     & a:first-child
     {
         margin-right: auto;
     }
 
+    /*
+      Todos os links exceto o último (ex: botão "Baixar agora").
+    */
     & a:not(:last-child)
     {
+        /*
+          Cor secundária para links de navegação.
+        */
         color: var(--text-color-secondary);
 
+        /*
+          No hover, a cor fica transparente
+          permitindo o efeito de gradiente aplicado globalmente.
+        */
         &:hover
         {
             color: transparent;

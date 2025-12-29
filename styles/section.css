@@ -1,19 +1,52 @@
+/*
+  Seção de imagem dos smartphones.
+  Exibida apenas no mobile.
+*/
 #smartphones-img
 {
+    /*
+      Espaçamento superior para separar do hero.
+    */
     margin-top: 5.21125rem;
-    background: url(../assets/icons/Illustration.svg) top/cover;
+
+    /*
+      Ilustração de fundo aplicada na seção.
+    */
+    background: url(../assets/icons/Illustration.svg) top / cover;
 
     & .container
     {
-        width: min(var(--max-width), 100% - 1.96875rem * 2);
-        margin-bottom: 0.03875rem;
+        /*
+          Ajuste fino da largura do container.
+          Usa padding horizontal diferente do padrão.
+        */
+        width: min(
+            var(--max-width),
+            100% - 1.96875rem * 2
+        );
+
+        /*
+          Pequeno ajuste de espaçamento da imagem.
+          Evita cortes visuais no layout.
+        */
+        & img
+        {
+            margin-bottom: 0.03875rem;
+        }
     }
 }
 
+/*
+  Estilos base para todas as seções.
+*/
 section
 {
     & header
     {
+        /*
+          Texto auxiliar acima do título principal.
+          Ex.: "Conheça o app", "Planos e preços".
+        */
         & strong
         {
             display: block;
@@ -24,12 +57,18 @@ section
             color: var(--brand-color-primary);
         }
 
+        /*
+          Espaçamento entre subtítulo e título.
+        */
         & h2
         {
             margin-top: 0.5rem;
         }
     }
 
+    /*
+      Parágrafos padrão das seções.
+    */
     & p
     {
         margin-top: 0.5rem;
@@ -37,8 +76,15 @@ section
     }
 }
 
+/*
+  Layout para telas grandes (desktop).
+*/
 @media (width >= 80em)
 {
+    /*
+      Remove a seção de smartphones no desktop
+      (a imagem aparece em outras seções).
+    */
     #smartphones-img
     {
         display: none;

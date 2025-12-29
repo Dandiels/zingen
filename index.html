@@ -1,50 +1,68 @@
+<!-- Declara o documento como HTML5 -->
 <!DOCTYPE html>
+<!-- Define o idioma principal do documento como português do Brasil -->
 <html lang="pt-BR">
 
 <head>
 
+  <!-- Otimização de performance: pré-conexão com servidores do Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
+  <!-- Configuração de codificação de caracteres -->
   <meta charset="UTF-8">
+  <!-- Configuração para layout responsivo em dispositivos móveis -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título exibido na aba do navegador -->
   <title>Zingen - Karaokê</title>
 
+  <!-- Importação do arquivo CSS principal -->
   <link rel="stylesheet" href="styles/index.css">
+  <!-- Importação da fonte utilizada no projeto -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+  <!-- Cabeçalho principal com navegação -->
   <header>
     <div class="container py-base">
       <nav class="flex items-center gap-1.5">
 
+        <!-- Logo do aplicativo -->
         <a href="#">
           <img src="assets/icons/Zingen.svg" alt="Logo Zingen" />
         </a>
 
+        <!-- Links de navegação (visíveis apenas no desktop) -->
         <a href="#about" class="desktop-only">Conheça o app</a>
         <a href="#features" class="desktop-only">Funcionalidades</a>
         <a href="#pricing" class="desktop-only">Planos e preços</a>
+        <!-- CTA principal do header -->
         <a href="#download" class="btn btn-sm">Baixar agora</a>
 
       </nav>
     </div>
   </header>
 
+  <!-- Seção Hero: primeira impressão do produto -->
   <section id="hero">
     <div class="container">
 
+      <!-- Elemento visual decorativo -->
       <img src="assets/icons/Music bars.svg" alt="Imagem de Ondas Sonoras" />
 
+      <!-- Título e subtítulo -->
       <h1>Quem canta seus males espanta</h1>
       <p>Cantar nunca foi tão fácil</p>
 
+      <!-- Botões de ação -->
       <div class="buttons flex items-center gap-1">
 
+        <!-- Botão visual (sem texto, usado apenas como destaque gráfico) -->
         <a href="#pricing" aria-label="Ver planos" class="btn btn-md"></a>
+        <!-- CTA principal -->
         <a href="#download" class="btn btn-md">Baixar agora</a>
 
       </div>
@@ -52,15 +70,18 @@
     </div>
   </section>
 
+  <!-- Seção com imagem dos smartphones (mockup do app) -->
   <section id="smartphones-img">
     <div class="container">
       <img src="assets/App mockups.png" alt="Imagem de Dois Smartphones" />
     </div>
   </section>
 
+  <!-- Seção "Sobre o app" -->
   <section id="about">
     <div class="container even-columns py-xl items-center">
 
+      <!-- Texto descritivo -->
       <div>
 
         <header>
@@ -80,6 +101,7 @@
         
       </div>
 
+      <!-- Imagem complementar (somente no desktop) -->
       <div>
         <img class="desktop-only" src="assets/App mockups.png" alt="Imagem de Dois Smartphones" />
       </div>
@@ -87,9 +109,11 @@
     </div>
   </section>
 
+  <!-- Seção de funcionalidades -->
   <section id="features">
     <div class="cards container py-xl grid gap-1.5">
 
+      <!-- Card de funcionalidade -->
       <div class="card py-lg px-lg">
 
         <img src="assets/icons/MagicWand.svg" alt="Imagem de uma Varinha Mágica" />
@@ -103,6 +127,7 @@
 
       </div>
 
+      <!-- Card com imagem adicional no desktop -->
       <div class="card py-lg px-lg">
 
         <div>
@@ -122,6 +147,8 @@
 
       </div>
 
+      <!-- Demais cards seguem o mesmo padrão -->
+      <!-- Gravação -->
       <div class="card py-lg px-lg">
 
         <img src="assets/icons/MicrophoneStage.svg" alt="Imagem de um Microfone" />
@@ -136,6 +163,7 @@
 
       </div>
 
+      <!-- Comunidade -->
       <div class="card py-lg px-lg">
 
         <div>
@@ -155,6 +183,7 @@
 
       </div>
 
+      <!-- Letras -->
       <div class="card py-lg px-lg">
 
         <div>
@@ -177,6 +206,7 @@
     </div>
   </section>
 
+  <!-- Seção de planos e preços -->
   <section id="pricing">
     <div class="container py-xl">
 
@@ -187,8 +217,10 @@
 
       </header>
 
+      <!-- Cards de planos -->
       <div class="cards even-columns items-center">
 
+        <!-- Plano básico -->
         <div class="card py-lg px-lg">
 
           <h3>Básico</h3>
@@ -211,6 +243,7 @@
 
         </div>
 
+        <!-- Plano premium (destaque visual) -->
         <div class="premium">
           <div class="card py-lg px-lg">
 
@@ -237,6 +270,7 @@
           </div>
         </div>
 
+        <!-- Plano família -->
         <div class="card py-lg px-lg">
 
           <h3>Família</h3>
@@ -266,10 +300,12 @@
     </div>
   </section>
 
+  <!-- Seção de download -->
   <section id="download">
     <div class="container py-xl">
       <div class="card grid items-center">
 
+        <!-- Texto de conversão -->
         <div>
 
           <header>
@@ -285,6 +321,7 @@
             transforme suas performances em experiências inesquecíveis!
           </p>
 
+          <!-- Botões das lojas -->
           <div class="buttons flex">
 
             <a href="#"><img src="assets/icons/App store button.svg" alt="Baixar da Apple Store" /></a>
@@ -294,6 +331,7 @@
 
         </div>
 
+        <!-- Imagem ilustrativa -->
         <img
           src="assets/rapaz-ouvindo-musica-com-fones-de-ouvido-e-cantando-no-aplicativo-de-karaoke-removebg 1.png" 
           alt="Imagem de um rapaz ouvindo música com fones de ouvido e cantando no aplicativo de karaokê" 
@@ -303,13 +341,16 @@
     </div>
   </section>
 
+  <!-- Rodapé -->
   <footer>
     <div class="grid">
 
+      <!-- Parte superior do footer -->
       <section class="grid top">
 
         <img src="assets/icons/Zingen.svg" alt="Logo Zingen" />
 
+        <!-- Navegação institucional -->
         <nav class="even-columns">
 
           <ul role="list" class="grid">
@@ -342,6 +383,7 @@
 
       </section>
 
+      <!-- Parte inferior do footer -->
       <section class="flex bottom gap-1.5">
 
         <div class="flex gap-1.5">

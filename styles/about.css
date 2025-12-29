@@ -1,18 +1,45 @@
+/*
+  Seção "Sobre o app".
+*/
 #about
 {
+    /*
+      Fundo diferente para destacar a seção.
+    */
     background-color: var(--surface-color);
 
+    /*
+      Ajuste do grid em telas menores.
+      Remove o espaçamento entre colunas no mobile.
+    */
     & .even-columns
     {
         gap: 0;
     }
 }
 
+/*
+  Layout para telas grandes (desktop).
+*/
 @media (width >= 80em)
 {
+    /*
+      Configuração específica do grid no desktop.
+    */
     #about .even-columns
     {
+        /*
+          Espaçamento entre as colunas.
+        */
         gap: 2rem;
-        grid-template-columns: calc(640 / 1216 * 100%) calc(544 / 1216 * 100%);
+
+        /*
+          Define larguras proporcionais fixas
+          640px para o texto e 544px para a imagem,
+          mantendo a proporção dentro de 1216px.
+        */
+        grid-template-columns:
+            calc(640 / 1216 * 100%)
+            calc(544 / 1216 * 100%);
     }
 }

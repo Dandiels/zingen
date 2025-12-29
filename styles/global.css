@@ -1,3 +1,7 @@
+/* 
+  Reset global e normalização do box model.
+  Garante previsibilidade no cálculo de largura/altura.
+*/
 *,
 *::before,
 *::after
@@ -5,6 +9,12 @@
     box-sizing: border-box;
 }
 
+/*
+  Reset geral:
+  - Remove margens e paddings padrão
+  - Herda fonte do elemento pai
+  - Melhora renderização de fontes em diferentes sistemas
+*/
 *
 {
     margin: 0;
@@ -15,20 +25,29 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+/*
+  Variáveis CSS globais (Design System).
+  Centraliza cores, fontes, tamanhos e espaçamentos.
+*/
 :root
 {
+    /* Cores de fundo */
     --bg-color: #09090B;
 
     --surface-color: #18181B;
 
+    /* Cor de borda */
     --stroke-color: #27272A;
 
+    /* Cores de texto */
     --text-color-primary: #F4F4F5;
     --text-color-secondary: #A1A1AA;
     
+    /* Cores da marca para gradiente */
     --brand-color-primary: #F7B733;
     --brand-color-secondary: #FC4A1A;
 
+    /* Tipografia */
     --ff-sans: 'Inter', system-ui, sans-serif;
 
     --fw-base: 400;
@@ -41,13 +60,18 @@
     --fs-xl: 1.5rem;
     --fs-2xl: 2.5rem;
 
+    /* Espaçamentos horizontais */
     --px-lg: 1.5rem;
 
+    /* Espaçamentos verticais */
     --py-base: 1rem;
     --py-lg: 1.5rem;
     --py-xl: 3rem;
 }
 
+/*
+  Configuração base do documento.
+*/
 html
 {
     font-family: var(--ff-sans);
@@ -59,12 +83,19 @@ html
     scroll-behavior: smooth;
 }
 
+/*
+  Estilo base do body.
+*/
 body
 {
     background-color: var(--bg-color);
     overflow-x: hidden;
 }
 
+/*
+  Títulos.
+  Tipografia consistente e hierarquia visual clara.
+*/
 h1,
 h2,
 h3
@@ -90,12 +121,19 @@ h3
     font-size: var(--fs-lg);
 }
 
+/*
+  Links.
+*/
 a
 {
     text-decoration: none;
     color: inherit;
 }
 
+/*
+  Efeito hover em links:
+  Gradiente aplicado apenas ao texto.
+*/
 a:hover
 {
     background: linear-gradient(
@@ -109,17 +147,27 @@ a:hover
     color: transparent;
 }
 
+/*
+  Listas sem marcador quando usadas como layout.
+*/
 ul[role="list"]
 {
     list-style: none;
 }
 
+/*
+  Imagens responsivas.
+*/
 img
 {
     max-width: 100%;
     display: inline-block;
 }
 
+/*
+  Ajustes para telas grandes (desktop).
+  Escala tipografia e espaçamentos proporcionalmente.
+*/
 @media (width >= 80em)
 {
     :root

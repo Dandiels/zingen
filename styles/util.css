@@ -1,23 +1,42 @@
+/* 
+  Utilitário de padding vertical base.
+  Aplica padding no eixo vertical (top e bottom).
+*/
 .py-base
 {
     padding-block: var(--py-base);
 }
 
+/* 
+  Padding vertical grande.
+*/
 .py-lg
 {
     padding-block: var(--py-lg);
 }
 
+/* 
+  Padding vertical extra grande.
+*/
 .py-xl
 {
     padding-block: var(--py-xl);
 }
 
+/* 
+  Padding horizontal grande.
+  Aplica padding no eixo inline (left e right).
+*/
 .px-lg
 {
     padding-inline: var(--px-lg);
 }
 
+/*
+  Container centralizador
+  - Define largura máxima
+  - Garante margens laterais responsivas
+*/
 .container
 {
     --max-width: 375px;
@@ -25,54 +44,88 @@
     margin-inline: auto;
 }
 
+/*
+  Classe utilitária para esconder elementos no mobile.
+*/
 .desktop-only
 {
     display: none;
 }
 
+/*
+  Grid com colunas equilibradas.
+  No mobile funciona como lista vertical.
+*/
 .even-columns
 {
     display: grid;
     gap: 1rem;
 }
 
+/*
+  Ativa layout flexbox.
+*/
 .flex
 {
     display: flex;
 }
 
+/*
+  Centraliza itens no eixo cruzado do flexbox.
+*/
 .items-center
 {
     align-items: center;
 }
 
+/*
+  Espaçamento padrão entre elementos.
+*/
 .gap-1
 {
     gap: 1rem;
 }
 
+/*
+  Espaçamento intermediário (1.5rem).
+*/
 .gap-1\.5
 {
     gap: 1.5rem;
 }
 
+/*
+  Ativa layout grid.
+*/
 .grid
 {
     display: grid;
 }
 
+/*
+  Ajustes para telas grandes (desktop).
+*/
 @media (width >= 80em)
 {
+    /* 
+      Aumenta a largura máxima do container.
+    */
     .container
     {
         --max-width: 80rem;
     }
 
+    /*
+      Exibe elementos apenas no desktop.
+    */
     .desktop-only
     {
         display: initial;
     }
 
+    /*
+      Transforma o grid em colunas horizontais iguais.
+    */
     .even-columns
     {
         grid-auto-flow: column;

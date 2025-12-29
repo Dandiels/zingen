@@ -1,11 +1,32 @@
+/*
+  Componente base de cartão (card).
+  Utilizado em várias seções do layout.
+*/
 .card
 {
+    /*
+      Cor de fundo do cartão.
+    */
     background: var(--surface-color);
+
+    /*
+      Borda sutil para separar o card do fundo.
+    */
     border: 1px solid var(--stroke-color);
+
+    /*
+      Cantos arredondados para visual moderno.
+    */
     border-radius: 1.5rem;
 
+    /*
+      Estilização do título dentro do card.
+    */
     & h3
     {
+        /*
+          Espaçamento entre o título e o conteúdo acima.
+        */
         margin-top: 1rem;
     }
 }

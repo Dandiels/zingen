@@ -1,13 +1,89 @@
+/* 
+  Arquivo principal de estilos do projeto Zingen - Karaokê.
+  Responsável por importar todos os módulos CSS da aplicação.
+*/
+
+/* Estilos globais:
+   - Reset de CSS
+   - Variáveis (cores, fontes, espaçamentos)
+   - Configurações base do layout
+*/
 @import url(global.css);
+
+/* Classes utilitárias reutilizáveis:
+   - Flex, Grid
+   - Espaçamentos (padding, margin)
+   - Alinhamentos
+*/
 @import url(util.css);
+
+/* Estilos base e variações de botões:
+   - Botões primários e secundários
+   - Tamanhos (sm, md, etc.)
+*/
 @import url(button.css);
+
+/* Estilos dos ícones e links de redes sociais:
+   - Footer
+   - Botões sociais
+*/
 @import url(social.css);
+
+/* Estilização do cabeçalho:
+   - Header fixo
+   - Navegação principal
+   - Menu responsivo
+*/
 @import url(header.css);
+
+/* Seção Hero:
+   - Título principal
+   - Subtítulo
+   - CTA inicial
+*/
 @import url(hero.css);
+
+/* Estilos genéricos de seções:
+   - Padding vertical
+   - Estrutura base de seções
+*/
 @import url(section.css);
+
+/* Seção "Sobre o app":
+   - Layout em colunas
+   - Tipografia e espaçamento do texto explicativo
+*/
 @import url(about.css);
+
+/* Estilos base dos cards:
+   - Bordas
+   - Sombras
+   - Espaçamento interno
+*/
 @import url(cards.css);
+
+/* Seção de funcionalidades:
+   - Cards com imagens
+   - Layout específico para telas grandes
+   - Importação condicionada a telas >= 80em (desktop)
+*/
 @import url(features.css) (width >= 80em);
+
+/* Seção de planos e preços:
+   - Cards de preços
+   - Destaque do plano premium
+*/
 @import url(pricing.css);
+
+/* Seção de download:
+   - CTA final
+   - Layout com imagem e texto
+*/
 @import url(download.css);
+
+/* Estilos do rodapé:
+   - Navegação institucional
+   - Redes sociais
+   - Direitos autorais
+*/
 @import url(footer.css);

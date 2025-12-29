@@ -1,90 +1,164 @@
+/*
+  Classe base de botão.
+  Define variáveis CSS para facilitar variações de cor.
+*/
 .btn
 {
+    /* 
+      Cores padrão do botão.
+      Podem ser sobrescritas no hover.
+    */
     --btn-bg-color: var(--text-color-primary);
     --btn-color: var(--bg-color);
     
     border: 0;
 
+    /*
+      Centraliza o conteúdo do botão.
+    */
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /*
+      Ajusta o tamanho ao conteúdo.
+    */
     width: fit-content;
 
+    /*
+      Arredondamento padrão.
+    */
     border-radius: 0.5rem;
 
+    /*
+      Tipografia do botão.
+    */
     font-family: var(--ff-sans);
     font-weight: var(--fw-md);
     line-height: 1.5rem;
 
     cursor: pointer;
 
+    /*
+      Aplica as cores definidas nas variáveis.
+    */
     background: var(--btn-bg-color);
     color: var(--btn-color);
 }
 
+/*
+  Estado hover do botão.
+  Aplica gradiente como fundo.
+*/
 .btn:hover
 {
+    /*
+      Troca o background sólido por um gradiente.
+    */
     --btn-bg-color: linear-gradient(
         90deg,
         var(--brand-color-secondary) 0%,
         var(--brand-color-primary) 100%
     );
 
+    /*
+      Garante que o gradiente seja aplicado corretamente.
+    */
     -webkit-background-clip: initial;
     background-clip: initial;
+
     color: var(--btn-color);
 }
 
+/*
+  Botão pequeno.
+*/
 .btn-sm
 {
     padding: 0.5rem 1rem;
     font-size: var(--fs-sm);
 }
 
+/*
+  Botão médio (padrão).
+*/
 .btn-md
 {
     padding: 0.75rem 1.5rem;
     font-size: var(--fs-base);
 }
 
+/*
+  Botão grande.
+*/
 .btn-lg
 {
     padding: 1rem 2rem;
     font-size: 1.125rem;
 }
 
+/*
+  Botões que usam aria-label.
+  Criam um efeito de texto vazado com borda interna.
+*/
 .btn[aria-label]
 {
     position: relative;
 
+    /*
+      Camada interna simulando uma borda.
+    */
     &::before
     {
         content: "";
         position: absolute;
         border-radius: inherit;
+
+        /*
+          Cria o espaçamento da borda interna.
+        */
         inset: 0.09375rem;
         background-color: var(--bg-color);
     }
 
+    /*
+      Texto do botão usando o aria-label.
+      Renderizado com gradiente.
+    */
     &::after
     {
         content: attr(aria-label);
+
+        /*
+          Aplica o gradiente apenas no texto.
+        */
         background: var(--btn-bg-color);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+
         position: relative;
         z-index: 1;
     }
 }
 
+/*
+  Ajustes para telas grandes (desktop).
+*/
 @media (width >= 80em)
 {
+    /*
+      Botão pequeno cresce no desktop.
+    */
     .btn-sm
     {
         padding: 0.75rem 1.5rem;
         font-size: var(--fs-base);
     }
+
+    /*
+      Botão médio vira praticamente um botão grande.
+    */
     .btn-md
     {
         padding: 1rem 2rem;

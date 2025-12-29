@@ -1,29 +1,50 @@
+/*
+  Rodapé do site.
+*/
 footer
 {
+    /*
+      Estilo base do texto do rodapé.
+    */
     color: var(--text-color-secondary);
     font-weight: var(--fw-md);
 
+    /*
+      Container principal do rodapé.
+    */
     & > div
     {
         padding: var(--py-xl) 3rem var(--py-lg);
     }
 
+    /*
+      Espaçamento entre os blocos principais.
+    */
     & > div,
     & .top
     {
         gap: 3rem;
     }
 
+    /*
+      Navegação em colunas no rodapé.
+    */
     & nav.even-columns
     {
         gap: 4rem;
     }
 
+    /*
+      Listas da parte superior do rodapé.
+    */
     & .top ul
     {
         align-content: start;
         gap: 1.25rem;
 
+        /*
+          Título das colunas de navegação.
+        */
         & .title
         {
             font-size: 0.75rem;
@@ -33,39 +54,63 @@ footer
             color: var(--brand-color-primary);
         }
         
+        /*
+          Itens das listas de navegação.
+        */
         & li
         {
             line-height: 1.5rem;
         }
     }
 
+    /*
+      Parte inferior do rodapé (copyright e links).
+    */
     & .bottom
     {
         flex-wrap: wrap;
 
+        /*
+          Texto informativo do rodapé.
+        */
         & span
         {
             font: var(--fw-base) var(--fs-sm)/1.5rem var(--ff-sans);
         }
     }
 
+    /*
+      Ajustes para layout desktop.
+    */
     @media (width >= 80em)
     {
+        /*
+          Espaçamento maior no container principal.
+        */
         & > div
         {
             padding: var(--py-xl) var(--px-lg) 2rem;
             gap: 5rem;
         }
 
+        /*
+          Layout da parte superior no desktop.
+        */
         & .top
         {
             grid-template-columns: auto 1fr;
             gap: 0;
 
+            /*
+              Navegação alinhada à direita.
+            */
             & nav
             {
                 margin-left: auto;
 
+                /*
+                  Largura fixa das colunas de links.
+                */
                 & ul
                 {
                     width: 14rem;
@@ -73,6 +118,9 @@ footer
             }
         }
 
+        /*
+          Organização da parte inferior no desktop.
+        */
         & .bottom
         {
             gap: 0;

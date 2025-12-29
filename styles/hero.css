@@ -1,23 +1,49 @@
+/*
+  Seção Hero.
+  Área principal de destaque da landing page.
+*/
 #hero
 {
+    /*
+      Centraliza todo o conteúdo do hero.
+    */
     text-align: center;
+
+    /*
+      Espaçamento superior no mobile.
+    */
     padding-top: 4rem;
 
+    /*
+      Ajuste específico do container dentro do hero.
+      Remove a limitação de largura padrão.
+    */
     & .container
     {
         width: auto;
     }
 
+    /*
+      Imagem decorativa de ondas sonoras.
+      Ajuste de largura no mobile.
+    */
     & img[src*="Music"]
     {
         width: 12.875rem;
     }
 
+    /*
+      Espaçamento entre a imagem e o título principal.
+    */
     & h1
     {
         margin-top: 1rem;
     }
 
+    /*
+      Subtítulo do hero.
+      Tipografia maior e cor secundária.
+    */
     & p
     {
         font: var(--fw-md) var(--fs-lg)/1.4 var(--ff-sans);
@@ -25,6 +51,10 @@
         margin-top: 0.5rem;
     }
 
+    /*
+      Container dos botões de ação.
+      Centraliza os botões horizontalmente.
+    */
     & .buttons
     {
         justify-content: center;
@@ -32,29 +62,55 @@
     }
 }
 
+/*
+  Layout para telas grandes (desktop).
+*/
 @media (width >= 80em)
 {
     #hero
     {
-        background: url(../assets/icons/Illustration.svg) no-repeat bottom center/contain;
+        /*
+          Ilustração de fundo posicionada na parte inferior.
+        */
+        background: url(../assets/icons/Illustration.svg)
+            no-repeat
+            bottom
+            center / contain;
+
+        /*
+          Espaçamento vertical maior no desktop.
+          Inclui espaço extra para a ilustração.
+        */
         padding-block: var(--py-xl) 14.9375rem;
 
+        /*
+          Imagem decorativa maior no desktop.
+        */
         & img[src*="Music"]
         {
             width: 25.75rem;
         }
 
+        /*
+          Ajuste fino de espaçamento do título.
+        */
         & h1
         {
             margin-top: 1.5rem;
         }
 
+        /*
+          Subtítulo com tipografia maior no desktop.
+        */
         & p
         {
             margin-top: 1rem;
             font-size: 2.5rem;
         }
 
+        /*
+          Mais espaço entre botões e conteúdo no desktop.
+        */
         .buttons
         {
             margin-top: 3rem;
