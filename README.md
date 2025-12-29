@@ -1,6 +1,7 @@
 # Landing Page de Aplicativo de Karaokê
 
-Este é um projeto de **landing page para um aplicativo de karaokê, chamado Zingen**, desenvolvido com **HTML** e **CSS**.  
+Este é um projeto de **landing page para um aplicativo de karaokê, chamado Zingen**, desenvolvido com **HTML** e **CSS**.
+
 A página apresenta uma interface moderna, escura e responsiva, com foco na divulgação do aplicativo, seus recursos, planos disponíveis e chamadas para download.
 
 O layout foi construído com atenção à **organização visual**, **componentização de estilos** e **uso de CSS moderno**, simulando uma página real de apresentação de produto digital.
@@ -55,13 +56,22 @@ Ou, se preferir:
 * Seção de download com links para lojas de aplicativos.
 * Rodapé com navegação, informações adicionais e redes sociais.
 
-## Captura de Tela Mobile
+## Capturas de Tela
 
-![Captura de Tela Mobile do Zingen - Karaokê](assets/zingen-mobile.png)
-
-## Captura de Tela Desktop
-
-![Captura de Tela Desktop do Zingen - Karaokê](assets/zingen-desktop.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="top">
+        <strong>Versão Mobile</strong><br />
+        <img src="assets/zingen-mobile.png" alt="Versão Mobile" width="280" />
+      </td>
+      <td align="center" valign="top">
+        <strong>Versão Desktop</strong><br />
+        <img src="./assets/zingen-desktop.png" alt="Versão Desktop" width="520" />
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## Créditos
 
